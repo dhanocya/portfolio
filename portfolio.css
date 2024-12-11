@@ -1,0 +1,149 @@
+:root{
+    --day: white;
+    --night: black;
+    --cards: orangered;
+}
+
+body:has(option[value="night"]:checked){
+    background: var(--night);
+    color: var(--day);
+}
+
+body{
+    background: var(--day);
+    color: var(--night);
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(12px);
+}
+
+header{
+    border-bottom: 1px solid var(--night);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+select{
+    height: 3rem;
+    width: 5rem;
+    border-radius: 1rem;
+    font-size: 1em;
+}
+.hero{
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.content{
+    width: 50vh;
+}
+img{
+    width: clamp(10px, 300px, 1200px);
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid var(--cards);
+    transition: 1s;
+    animation: reload 1s linear;
+}
+
+@keyframes reload {
+    20%{
+        transform: rotate(20deg);
+    }
+}
+.set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.squ{
+    width: clamp(100px, 80%,100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.skill{
+    background: var(--cards);
+    color: var(--cards);
+    height: 10vh;
+    margin: 5px 0px;
+    transition: 0.5s ease-in-out;
+    border: 5px solid var(--cards);
+
+    &:hover{
+        color: var(--night);
+    }
+}
+
+.skill:hover{
+    background: var(--cards);
+    border-left: 1em solid var(--night);
+}
+
+.education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.boxp{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lerning{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    min-width: 220px;
+    height: 220px;
+    background: var(--cards);
+    border-radius: 1rem;
+    margin: 2px 2px;
+    &:hover{
+        box-shadow: 0px 0px 23px var(--cards);
+        transform: scale(1.1);
+    }
+}
+
+span::after{
+    animation: conr 3s infinite;
+    content: 'creative web apps';
+    background-color: var(--cards);
+}
+
+@keyframes conr {
+    0%{
+        content: 'creative web apps';
+    }
+
+    50%{
+        content: 'simple web apps';
+       }
+    
+    100%{
+        content: 'creative web apps';
+    }
+}
