@@ -1,7 +1,7 @@
 :root{
     --day: white;
     --night: black;
-    --cards: orangered;
+    --cards:  #e5d4ef;
 }
 
 body:has(option[value="night"]:checked){
@@ -68,7 +68,6 @@ img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
 }
 
 .squ{
@@ -77,11 +76,12 @@ img{
     flex-direction: column;
 }
 
-.skill{
+.skillCard{
     background: var(--cards);
     color: var(--cards);
     height: 10vh;
     margin: 5px 0px;
+    display: flex;
     transition: 0.5s ease-in-out;
     border: 5px solid var(--cards);
 
@@ -90,7 +90,7 @@ img{
     }
 }
 
-.skill:hover{
+.skillCard:hover{
     background: var(--cards);
     border-left: 1em solid var(--night);
 }
@@ -147,3 +147,25 @@ span::after{
         content: 'creative web apps';
     }
 }
+
+.fa-brands,a{
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.projectsCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projectsCards  img {
+    border-radius: 0%;
+}
+
+.boxCard{
+    background-color: var(--cards);
+    margin: 5px;
+}
+
