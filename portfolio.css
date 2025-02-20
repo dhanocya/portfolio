@@ -1,18 +1,20 @@
 :root{
     --day: white;
     --night: black;
-    --cards:  #e5d4ef;
+    --cards: orange;
 }
 
-body:has(option[value="night"]:checked){
-    background: var(--night);
-    color: var(--day);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     background: var(--day);
     color: var(--night);
     font-family: sans-serif;
+    text-transform: uppercase;
 }
 header{
     display: flex;
@@ -21,6 +23,7 @@ header{
     position: sticky;
     top: 0;
     backdrop-filter: blur(12px);
+    height: 50px;
 }
 
 header{
@@ -38,7 +41,7 @@ select{
     font-size: 1em;
 }
 .hero{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -47,7 +50,7 @@ select{
 }
 
 .content{
-    width: 50vh;
+    width: 60vh;
 }
 img{
     width: clamp(10px, 300px, 1200px);
@@ -68,31 +71,34 @@ img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .squ{
-    width: clamp(100px, 80%,100%);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
+
+
 
 .skillCard{
     background: var(--cards);
-    color: var(--cards);
-    height: 10vh;
-    margin: 5px 0px;
+    height: 30vh;
+    width: 30vw;
+    min-width: 300px;
+    min-height: 220px;
     display: flex;
-    transition: 0.5s ease-in-out;
-    border: 5px solid var(--cards);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
 
     &:hover{
-        color: var(--night);
+        border-left: 5px solid black;
     }
-}
-
-.skillCard:hover{
-    background: var(--cards);
-    border-left: 1em solid var(--night);
 }
 
 .education{
@@ -169,3 +175,18 @@ span::after{
     margin: 5px;
 }
 
+.footer{
+    height: 100vh;
+}
+
+.halfTop,.halfBottom{
+    height: calc(100vh - 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.halfBottom{
+    background: var(--cards);
+}
