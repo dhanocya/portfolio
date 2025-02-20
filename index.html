@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="p2.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <h1>portfoli<sup>o</sup></h1>
-        <ul>
-            <select>
-                <option value="day">day</option>
-                <option value="night">night</option>
-            </select>
-        </ul>
+        <input type="color" id="bg">
+        <input type="color" id="text">
+        <input type="color" id="card">
     </header>
 
     <main>
         <div class="hero">
             <img src="sqe.jpg" alt="">
             <div class="content">
-                <h1>hi, its dhanraj singh</h1>
+                <h1>dhanraj singh</h1>
+                <p>frontend devloper</p>
                 <h2>i love building <span></span></h3>
             </div>
         </div>
 
         <section class="set">
-                <h1>my skill set</h1>
+            <h1>my skill set</h1>
             <div class="squ">
                 <div class="skillCard">
-                    <h1 class="skill">html <sub>u r seeing the art</sub></h1>
                     <i class="fa-brands fa-html5"></i>
+                    <h1>html</h1>
                 </div>
 
                 <div class="skillCard">
-                    <h1 class="skill">css <sub>u r seeing the example</sub></h1>
                     <i class="fa-brands fa-css3"></i>
+                    <h1>css</h1>
                 </div>
 
                 <div class="skillCard">
-                    <h1 class="skill">javascript <sub>learning...</sub></h1>
                     <i class="fa-brands fa-js"></i>
+                    <h1>javascript</h1>
                 </div>
 
                 <div class="skillCard">
-                    <h1 class="skill">bootstrap <sub>knows basic</sub></h1>
                     <i class="fa-brands fa-bootstrap"></i>
+                    <h1>bootstrap</h1>
                 </div>
 
                 <div class="skillCard">
-                    <h1 class="skill">react <sub>knows basic</sub></h1>
                     <i class="fa-brands fa-react"></i>
+                    <h1>react</h1>
                 </div>
             </div>
         </section>
@@ -69,7 +71,7 @@
                         <li>12 passed with 56%</li>
                     </div>
                 </div>
-    
+
                 <div class="lerning">
                     <h2>currently</h2>
                     <div class="lists">
@@ -77,7 +79,7 @@
                         <li>2nd year of bca</li>
                     </div>
                 </div>
-    
+
                 <div class="lerning">
                     <h2>hobbies</h2>
                     <div class="lists">
@@ -95,41 +97,99 @@
             <div class="projectsCards">
                 <div class="boxCard">
                     <img src="reso/sky.jpg" alt="">
-                    <h1>sky project</h1>
+                    <h1>html css</h1>
                 </div>
-    
+
                 <div class="boxCard">
                     <img src="reso/sky.jpg" alt="">
-                    <h1>sky project</h1>
+                    <h1>js</h1>
                 </div>
-    
+
                 <div class="boxCard">
                     <img src="reso/sky.jpg" alt="">
-                    <h1>sky project</h1>
+                    <h1>react js</h1>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="set">
-        <h2>follow me on</h2>
+    <footer class="footer">
+        <div class="halfTop">
+            <h2>follow me on</h2>
 
-        <div class="socialAcc">
-            <a href="https://www.instagram.com/dhertical/">
-                <i class="fa-brands fa-square-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/@Dhanocya">
-                <i class="fa-brands fa-square-youtube"></i>
-            </a>
-    
-            <a href="https://github.com/dhanocya">
-                <i class="fa-brands fa-square-github"></i>
-            </a>
-    
-            <a href="https://www.linkedin.com/in/dhanraj-singh-107898320/">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+            <div class="socialAcc">
+                <a href="https://www.instagram.com/dhertical/">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Dhanocya">
+                    <i class="fa-brands fa-square-youtube"></i>
+                </a>
+
+                <a href="https://github.com/dhanocya">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/dhanraj-singh-107898320/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
         </div>
+
+        <div class="halfBottom">
+            <h1>made with love</h1>
+        </div>
+
     </footer>
+
+    <script>
+        let bg = document.querySelector("#bg");
+        let body = document.querySelector("body");
+
+        bg.addEventListener("input", function () {
+            body.style.background = bg.value;
+        })
+
+        // text color picker
+
+        let text = document.querySelector("#text");
+
+        text.addEventListener("input", function () {
+            body.style.color = text.value;
+        })
+
+        // card color picker
+
+        let card = document.querySelector("#card");
+        let boxes = document.querySelectorAll(".skillCard");
+        let ler = document.querySelectorAll(".lerning");
+        let pc = document.querySelectorAll(".boxCard");
+        let half = document.querySelectorAll(".halfBottom");
+        let img = document.querySelectorAll("img");
+
+
+        card.addEventListener("input", () => {
+            boxes.forEach(box => {
+                box.style.background = card.value;
+            });
+
+            ler.forEach(element => {
+                element.style.background = card.value;
+            });
+
+            pc.forEach(pc => {
+                pc.style.background = card.value;
+            });
+
+            half.forEach(hal => {
+                hal.style.background = card.value;
+            })
+
+            img.forEach(img =>{
+                img.style.borderColor = card.value;
+            })
+        });
+
+    </script>
 </body>
-</html> 
+
+</html>
