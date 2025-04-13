@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="p2.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -22,7 +22,7 @@
 
     <main>
         <div class="hero">
-            <img src="sqe.jpg" alt="">
+            <img src="reso/moon.jpg" alt="">
             <div class="content">
                 <h1>dhanraj singh</h1>
                 <p>frontend devloper</p>
@@ -92,23 +92,18 @@
         </section>
 
         <section class="set">
-            <h1>projects</h1>
-
+            <h1>my best work till now</h1>
             <div class="projectsCards">
-                <div class="boxCard">
-                    <img src="reso/sky.jpg" alt="">
-                    <h1>html css</h1>
-                </div>
-
-                <div class="boxCard">
-                    <img src="reso/sky.jpg" alt="">
-                    <h1>js</h1>
-                </div>
-
-                <div class="boxCard">
-                    <img src="reso/sky.jpg" alt="">
-                    <h1>react js</h1>
-                </div>
+                <ul>
+                    <li><a href="https://dhanocya.github.io/css-pojects/" class="li-color">mini projets</a></li>
+                    <li><a href="https://dhanocya.github.io/twoSide/">two side form</a></li>
+                    <li><a href="https://dhanocya.github.io/coptop/">login form</a></li>
+                    <li><a href="https://dhanocya.github.io/math-game/">math game</a></li>
+                    <li><a href="https://dhanocya.github.io/htmlCssp2/">painter website</a></li>
+                    <li><a href="https://dhanocya.github.io/signUp-ver2/">two sided v2</a></li>
+                    <li><a href="https://dhanocya.github.io/search-ani/aniSearch/">searchbar</a></li>
+                    <li><a href="https://dhanocya.github.io/search-ani/newCount/">count down</a></li>
+                </ul>
             </div>
         </section>
     </main>
@@ -189,6 +184,11 @@
             })
         });
 
+        let licolor = document.querySelector(".li-color");
+
+        card.addEventListener("input", () => {
+            licolor.style.background = card.value;
+        })
     </script>
 </body>
 
