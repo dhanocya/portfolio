@@ -132,7 +132,7 @@ img {
   }
 }
 
-span::after {
+.changeS::after {
   animation: conr 3s infinite;
   content: "creative web apps";
   background-color: var(--cards);
