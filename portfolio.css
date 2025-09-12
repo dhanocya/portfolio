@@ -195,3 +195,63 @@ li {
 .halfBottom {
   background: var(--cards);
 }
+
+/* ---- GitHub Projects Section Styling ---- */
+
+/* यह सभी प्रोजेक्ट कार्ड्स के मेन कंटेनर को स्टाइल करेगा */
+#project-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* कार्ड्स की हाइट बराबर रखने के लिए */
+    flex-wrap: wrap;
+    gap: 20px; /* कार्ड्स के बीच में स्पेस */
+    padding: 20px;
+    width: 100%;
+}
+
+/* यह हर एक प्रोजेक्ट कार्ड को स्टाइल करेगा */
+.project-card {
+    background-color: var(--cards); /* आपकी वेबसाइट का कार्ड कलर इस्तेमाल किया */
+    color: var(--night); /* आपकी वेबसाइट का टेक्स्ट कलर */
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* कंटेंट को सही से फैलाने के लिए */
+    border-left: 5px solid black;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* हॉवर पर थोड़ा बड़ा दिखेगा */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.project-card h3 a {
+    text-decoration: none;
+    color: var(--night);
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    margin: 15px 0;
+    font-size: 0.9rem;
+    flex-grow: 1; /* यह डिस्क्रिप्शन को उपलब्ध जगह लेने देगा */
+}
+
+/* यह स्टार, फोर्क और लैंग्वेज वाले हिस्से को स्टाइल करेगा */
+.repo-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.repo-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* आइकॉन और टेक्स्ट के बीच स्पेस */
+}
+
